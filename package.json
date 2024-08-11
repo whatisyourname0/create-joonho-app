@@ -1,6 +1,6 @@
 {
   "name": "create-joonho-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A custom boilerplate for Joonho Lee",
   "main": "bootstrap.js",
   "bin": {
@@ -13,7 +13,11 @@
     "url": "https://github.com/whatisyourname0/create-joonho-app",
     "directory": "."
   },
-  "keywords": ["boilerplate", "react", "npx"],
+  "keywords": [
+    "boilerplate",
+    "react",
+    "npx"
+  ],
   "author": "whatisyourname0",
   "engines": {
     "node": ">=18"
