@@ -6,7 +6,7 @@ const path = require('path');
 const targetDir = process.argv[2] || 'my-joonho-app';
 
 // 복사할 템플릿 디렉토리 경로
-const templateDir = path.resolve(__dirname, 'template');
+const templateDir = path.resolve(__dirname, 'templates');
 
 // 복사 대상 디렉토리
 const targetPath = path.resolve(process.cwd(), targetDir);
