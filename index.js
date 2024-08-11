@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-const inquirer = require('inquirer');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import inquirer from 'inquirer';
 
 async function main() {
   console.log('🚀 [Create-Joonho-App] Start Installation...');
@@ -13,8 +13,8 @@ async function main() {
       type: 'input',
       name: 'projectName',
       message: '프로젝트 이름을 입력하세요:',
-      default: 'my-joonho-app'
-    }
+      default: 'my-joonho-app',
+    },
   ]);
 
   const projectPath = path.join(process.cwd(), projectName);
@@ -27,20 +27,14 @@ async function main() {
     description: 'A Joonho app',
     main: 'index.js',
     scripts: {
-      start: 'node index.js'
+      start: 'node index.js',
     },
-    packageManager: 'yarn@4.4.0'
+    packageManager: 'yarn@4.4.0',
   };
 
-  fs.writeFileSync(
-    path.join(projectPath, 'package.json'),
-    JSON.stringify(packageJson, null, 2)
-  );
+  fs.writeFileSync(path.join(projectPath, 'package.json'), JSON.stringify(packageJson, null, 2));
 
-  fs.writeFileSync(
-    path.join(projectPath, 'index.js'),
-    'console.log("Hello from Create-Joonho-App!");'
-  );
+  fs.writeFileSync(path.join(projectPath, 'index.js'), 'console.log("Hello from Create-Joonho-App!");');
 
   // 4. Yarn Berry 4.4.0 설정 및 의존성 설치
   console.log('Installing Dependencies...');
