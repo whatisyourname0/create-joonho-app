@@ -25,9 +25,9 @@
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["templates/src/*"],
     }
   },
-  "include": ["src"],
+  "include": ["templates/src"],
   "exclude": ["**/dist"],
 }
